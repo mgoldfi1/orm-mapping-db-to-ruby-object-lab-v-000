@@ -65,7 +65,7 @@ class Student
     sql =  <<-SQL
     SELECT name, grade FROM students WHERE grade <= 11
     SQL
-    self.find_by_name(DB[:conn].execute(sql)[0][0])
+    sql.flatten
   end
 
 
